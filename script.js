@@ -2,20 +2,38 @@
 
 
 
-// Loader Animation
-window.addEventListener('load', function () {
-    setTimeout(function () {
-      document.getElementById('loader-wrapper').style.opacity = '0';
-      document.getElementById('loader-wrapper').style.transition = 'opacity 0.5s ease';
-  
-      setTimeout(function () {
-        document.getElementById('loader-wrapper').style.display = 'none';
-      }, 500);
-    }, 3000); // Show loader for 3 seconds
-  });
-  
-  
-  
+
+
+
+
+const heroSection = document.getElementById("hero1");
+const backgrounds = [
+  "backgroundimage/image1.png",
+  "backgroundimage/image2.png",
+  "backgroundimage/image3.png"
+];
+
+let index = 0;
+
+function changeBackground() {
+  heroSection.style.backgroundImage = `url('${backgrounds[index]}')`;
+  index = (index + 1) % backgrounds.length;
+}
+
+changeBackground(); // Initial load
+setInterval(changeBackground, 2000); // Change every 2s
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
