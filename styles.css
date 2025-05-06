@@ -217,23 +217,6 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hero1 {
     height: 100vh;
     display: flex;
@@ -846,7 +829,7 @@ footer {
 @media screen and (max-width: 992px) {
     .hero1 {
         height: auto;
-        margin-top: 100px;
+        margin-top: 78px;
     }
 
 
@@ -917,7 +900,7 @@ footer {
 
     .hero1 {
         height: auto;
-        margin-top: 100px;
+        margin-top: 78px;
     }
 
     .hero-buttons {
@@ -985,7 +968,7 @@ footer {
 
     .hero1 {
         height: auto;
-        margin-top: 100px;
+        margin-top: 78px;
     }
 
     .hero1-content h1 {
@@ -1016,6 +999,11 @@ footer {
 
 
 @media (max-width: 480px) {
+    .hero1 {
+        height: auto;
+        margin-top: 78px;
+    }
+
     .hero1-content {
         margin-bottom: 2px;
     }
