@@ -842,12 +842,185 @@ nav {
 .service-list li:last-child {
     border-bottom: none;
 }
+/* ************************************************************************ */
 
 
 
 
 
 
+
+
+
+
+/* 15 years Experience Section  */
+
+  /* Main Section Styling */
+  .about-wrap-layout1 {
+    position: relative;
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./image/15year_image/image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Two-color slice container */
+.about-wrap-layout1::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(52, 152, 219, 0.7);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.about-wrap-layout1::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(231, 76, 60, 0.7);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+/* Content Box Styling */
+.about-box-layout1 {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.75); /* White with 50% transparency */
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.about-box-layout1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3498db, #e74c3c);
+}
+
+/* Header Styling */
+.item-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.experience-year {
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 1;
+    color: #3498db;
+    margin-right: 20px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.item-title {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-title li {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.item-title li span {
+    color: #e74c3c;
+}
+
+/* Paragraph Styling */
+.about-box-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.btn-fill-xl {
+    display: inline-block;
+    background: linear-gradient(to right, #3498db, #e74c3c);
+    color: white;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-fill-xl:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-fill-xl i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn-fill-xl:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-wrap-layout1 {
+        padding: 60px 20px;
+    }
+    
+    .about-box-layout1 {
+        padding: 30px;
+    }
+    
+    .experience-year {
+        font-size: 80px;
+    }
+    
+    .item-title li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .experience-year {
+        margin-bottom: 10px;
+    }
+    
+    .experience-year::after {
+        display: none;
+    }
+}
 
 
 
@@ -958,7 +1131,150 @@ textarea:focus {
 .hidden {
     display: none;
 }
+/* ****************************************** */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Client Brands Section Styles */
+.brand-wrap-layout2 {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #333;
+}
+
+.brand-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.brand-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+
+/* This is the key - we duplicate the items to create a seamless loop */
+.brand-track-inner {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.brand-box-layout2 {
+    flex: 0 0 auto;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+}
+
+.brand-box-layout2:hover {
+    transform: translateY(-5px);
+}
+
+.brand-box-layout2 .item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 150px;
+}
+
+.brand-box-layout2 .item-img img {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.brand-box-layout2:hover .item-img img {
+    opacity: 0.8;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 992px) {
+    .brand-wrap-layout2 {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .brand-box-layout2 {
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .brand-wrap-layout2 {
+        padding: 30px 0;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .brand-box-layout2 {
+        padding: 10px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************ */
 /* Footer */
 footer {
     background-color: #1f2937;
